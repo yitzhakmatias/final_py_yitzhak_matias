@@ -59,6 +59,6 @@ El proyecto incluye las siguientes APIs disponibles en http://127.0.0.1:8000/api
 ### Licencia
 
 
-```
+```yaml
 Copia este contenido en un archivo `README.md`. Si necesitas más ayuda, ¡házmelo saber! &#8203;:contentReference[oaicite:0]{index=0}&#8203;
 ```
