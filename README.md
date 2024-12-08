@@ -50,9 +50,15 @@ python manage.py runserver
 
 El proyecto incluye las siguientes APIs disponibles en http://127.0.0.1:8000/api/:
 
-Productos: /productos/
-Clientes: /clientes/
-Pedidos: /pedidos/
-Detalles de Pedidos: /detalles/
-Además, hay una API personalizada disponible en /api/custom/.
+* Productos: /productos/
+* Clientes: /clientes/
+* Pedidos: /pedidos/
+* Detalles de Pedidos: /detalles/
+* Además, hay una API personalizada disponible en /api/custom/.
 
+### Licencia
+
+
+```
+Copia este contenido en un archivo `README.md`. Si necesitas más ayuda, ¡házmelo saber! &#8203;:contentReference[oaicite:0]{index=0}&#8203;
+```
