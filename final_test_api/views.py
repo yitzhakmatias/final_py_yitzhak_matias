@@ -22,4 +22,4 @@ class DetallePedidoViewSet(viewsets.ModelViewSet):
     serializer_class = DetallePedidoSerializer
 @api_view(['GET'])
 def custom_api(request):
-    return Response({"mensaje": "API personalizada funcionando correctamente"})
+    return Response({"mensaje": "API personalizada funcionando correctamente."})
