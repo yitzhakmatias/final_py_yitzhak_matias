@@ -56,8 +56,24 @@ El proyecto incluye las siguientes APIs disponibles en http://127.0.0.1:8000/api
 * Detalles de Pedidos: /detalles/
 * Además, hay una API personalizada disponible en /api/custom/.
 
-### Licencia
 
+---
+
+#### . **Añadir el Archivo al Repositorio**
+
+1. Guarda el archivo `README.md`.
+
+2. Añádelo al control de versiones y realiza un commit:
+
+```bash
+git add README.md
+git commit -m "Add README.md with project instructions"
+git push
+```
+
+---
+
+### Licencia
 
 ```yaml
 Copia este contenido en un archivo `README.md`. Si necesitas más ayuda, ¡házmelo saber! &#8203;:contentReference[oaicite:0]{index=0}&#8203;
