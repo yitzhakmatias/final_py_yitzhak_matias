@@ -54,7 +54,7 @@ El proyecto incluye las siguientes APIs disponibles en http://127.0.0.1:8000/api
 * Clientes: /clientes/
 * Pedidos: /pedidos/
 * Detalles de Pedidos: /detalles/
-* Además, hay una API personalizada disponible en /api/custom/.
+* Además, hay una API personalizada disponible en /api/client/<int:client_id>/products/.
 
 
 ---
