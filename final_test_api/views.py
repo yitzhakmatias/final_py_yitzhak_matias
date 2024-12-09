@@ -21,5 +21,20 @@ class DetallePedidoViewSet(viewsets.ModelViewSet):
     queryset = DetallePedido.objects.all()
     serializer_class = DetallePedidoSerializer
 @api_view(['GET'])
-def custom_api(request):
-    return Response({"mensaje": "API personalizada funcionando correctamente."})
+def get_products_by_client(request, client_id):
+    try:
+        # Verifica si el cliente existe
+        cliente = Cliente.objects.get(id=client_id)
+
+        # Obtén todos los pedidos del cliente
+        pedidos = Pedido.objects.filter(cliente=cliente)
+
+        # Extrae los productos de los detalles de los pedidos
+        detalles = DetallePedido.objects.filter(pedido__in=pedidos)
+        productos = [detalle.producto for detalle in detalles]
+
+        # Serializar los productos únicos
+        productos_serializados = ProductoSerializer(set(productos), many=True)
+        return Response(productos_serializados.data)
+    except Cliente.DoesNotExist:
+        return Response({"error": "Cliente no encontrado"}, status=404)

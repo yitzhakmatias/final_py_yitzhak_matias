@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from final_test_api.views import ProductoViewSet, ClienteViewSet, PedidoViewSet, DetallePedidoViewSet, custom_api
+from final_test_api.views import ProductoViewSet, ClienteViewSet, PedidoViewSet, DetallePedidoViewSet, get_products_by_client
 
 router = DefaultRouter()
 router.register('productos', ProductoViewSet)
@@ -28,5 +28,5 @@ router.register('detalles', DetallePedidoViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('api/custom/', custom_api),
+    path('api/client/<int:client_id>/products/', get_products_by_client),
 ]
